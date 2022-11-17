@@ -96,6 +96,15 @@ def profile(username):
     return render_template("profile.html", username=username)
 
 
+# Log out
+@app.route("/logout")
+def logout():
+    # remove user from session cookie
+    flash("You have been logged out")
+    session.pop("user")
+    return redirect(url_for("login"))
+
+
 # Add Minister
 @app.route("/add_minister", methods=["GET", "POST"])
 def add_minister():
