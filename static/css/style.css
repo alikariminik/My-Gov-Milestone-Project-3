@@ -115,6 +115,17 @@ nav {
    width: 100%;
 }
 
+#signupbg{
+   /* background-image: url("../images/downing-street-night.jpg"); */
+   background-image: url("../images/larry.jpg");
+   background-repeat: no-repeat;
+   opacity: 0.91;
+   overflow: hidden;
+   background-position: center;
+   height: 100%;
+   width: 100%;
+}
+
 .login-card-outer{
    height: 700px;
    width: 100%;
@@ -138,6 +149,16 @@ nav {
    align-items: center; 
 }
 
+.login-submit-button{
+   color:white;
+   background-color:#C8102E;
+}
+
+.login-submit-button:hover{
+   color:#C8102E;
+   background-color:white;
+}
+
 .cat{
    height: 500px;
 }
@@ -149,3 +170,4 @@ nav {
    font-size: 44px;
    padding: 20px 0 20px 0;
 }
+
