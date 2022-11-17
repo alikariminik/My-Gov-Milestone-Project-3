@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<div class="center-align">
+    <div>
+        <h4>Edit a Cabinet Member</h4>
+        <p>Use the below form to edit an exisiting cabinet minister.</p>
+        <div>
+            <div class="row">
+                <form class="col s12" method="POST" action="{{ url_for('edit_minister', cab_id=cab._id) }}">
+                    <!----------- First Name ------------>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input value="{{ cab.first_name.capitalize() }}" placeholder="First Name" name="first_name"
+                                id="first_name" type="text" class="validate" required>
+                            <label for="first_name">First Name</label>
+                        </div>
+                    </div>
+                    <!----------- Last Name ------------>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input value="{{ cab.last_name.capitalize() }}" placeholder="Last Name" name="last_name" id="last_name"
+                                type="text" class="validate" required>
+                            <label for="last_name"></label>
+                        </div>
+                    </div>
+                    <!----------- Gender ------------>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <select id="gender" name="gender" class="validate" required>
+                                <option value="{{ cab.gender.capitalize() }}" disabled selected>{{ cab.gender.capitalize() }}</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                            <label for="gender">Gender</label>
+                        </div>
+                    </div>
+                    <!----------- Date of Birth ------------>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input value="{{ cab.dob }}" name="dob" id="dob" type="text" class="datepicker" required>
+                            <label for="dob">Date of Birth</label>
+                        </div>
+                    </div>
+                    <!----------- Minsterial Role ------------>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input value="{{ cab.role.title() }}" placeholder="Ministerial Role" name="role" id="role"
+                                type="text" class="validate" required>
+                            <label for="role">Ministerial Role</label>
+                        </div>
+                    </div>
+                    <!----------- Constituency ------------>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input value="{{ cab.constituency.title() }}" placeholder="Constituency" name="constituency"
+                                id="constituency" type="text" class="validate" required>
+                            <label for="constituency">Constituency</label>
+                        </div>
+                    </div>
+                    <!----------- Profile Picutre ------------>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input value="{{ cab.profile_pic }}" placeholder="URL for Profile Picture"
+                                name="profile_pic" id="profile_pic" type="text" class="validate">
+                            <label for="profile_pic">Profile Picture (URL)</label>
+                        </div>
+                    </div>
+                    <!----------- Submit and Cancel Buttons ------------>
+                    <div class="row">
+                        <div class="col s12 center-align">
+                            <a href="{{ url_for('cabinet') }}" class="btn-large red darken-1 text-shadow">
+                                Cancel <i class="fas fa-plus-cancel right"></i>
+                            </a>
+                            <button type="submit" class="btn-large green darken-1 text-shadow">
+                                Save Changes <i class="fas fa-plus-square right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

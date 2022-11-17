@@ -20,6 +20,19 @@ nav {
     padding: 0 20px 0 20px;
  }
  
+ /* Add & Edit Mode */
+ .add-member{
+    display: flex;
+    justify-content: flex-start;
+
+ }
+
+ .edit-switch{
+    display: flex;
+    justify-content: flex-end;
+ }
+
+
  /* Cabinet Member Profile Card and Picture */
  
  .image-container {
@@ -44,17 +57,18 @@ nav {
  /* Cabinet Member Profile Text Content */
 
 .cab-role{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight:600;
-    font-size: 16px;
+    font-size: 18px;
     text-align: center;
-    text-shadow: blue;
+    color: black;
  }
  
  .cab-name{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'lora' ,serif;
     font-weight: 500;
-    font-size: 15px;
+    color: black;
+    font-size: 18px;
     text-align: center;
     padding: 10px 0px 10px 0px;
  }

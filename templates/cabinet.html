@@ -10,20 +10,10 @@
 
 <!-- Modal Triggers for Add, Edit or Delete Cabinet members-->
 {% if session.user  %}
-<div class="row flex-box-buttons ">
-    <div class="col-s10">
-        <div class="">
-            <a class="btn modal-trigger" onclick="$('#modal1').modal('open');">Add a New Cabinet Minister</a>
-        </div>
+<div class="row ">
+    <div class="col s10 add-member">
+        <a class="btn modal-trigger" onclick="$('#modal1').modal('open');">Add a New Cabinet Minister</a>
     </div>    
-    <div class="col-s2 switch">Edit Mode
-        <label>
-            Off
-            <input type="checkbox">
-            <span class="lever"></span>
-            On
-        </label>
-    </div>
 </div>
 {% else %}
 <div class="row">
