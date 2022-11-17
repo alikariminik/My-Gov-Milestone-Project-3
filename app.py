@@ -135,12 +135,12 @@ def edit_minister(cab_id):
             "dob": request.form.get("dob"),
             "role": request.form.get("role"),
             "constituency": request.form.get("constituency"),
-            "profile_pic": request.form.get("profile_pic"),        
+            "profile_pic": request.form.get("profile_pic"),
         }
         mongo.db.cabinet.update_one({"_id": ObjectId(cab_id)}, {"$set": updated_details})
         flash("Minister Details Updated")
         return redirect(url_for("cabinet"))
-    
+
     cab = mongo.db.cabinet.find_one({"_id": ObjectId(cab_id)})
     return render_template("edit_minister.html", cab=cab)
 
