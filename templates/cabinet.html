@@ -51,10 +51,12 @@
             <div class="cab-name">{{ cab.first_name.capitalize() }} {{ cab.last_name.capitalize() }}</div>
             <div class="cab-constituency">MP for {{ cab.constituency.title() }}</div>
             <div class="center-align">
+                {% if session.user  %}
                 <a class="btn edit-icon" href="{{ url_for('edit_minister', cab_id=cab._id) }}"><i
                         class="fa-solid fa-pen-to-square "></i></a>
                 <a class="btn delete-icon" href="{{ url_for('delete_minister', cab_id=cab._id) }}"><i
                         class="fa-solid fa-trash "></i></a>
+                {% endif %}                        
             </div>
         </div>
     </div>

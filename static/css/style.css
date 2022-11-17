@@ -15,10 +15,6 @@ nav {
     background-color: white; 
  }
  
- .center-image {
-    overflow: hidden;
-    align-content: center;
- }
  
  .body-padding{
     padding: 0 20px 0 20px;
