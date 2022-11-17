@@ -23,6 +23,13 @@ def home():
     return render_template("home.html")
 
 
+# Cabinet page
+@app.route("/cabinet", methods=["GET", "POST"])
+def cabinet():
+    cabinet = list(mongo.db.cabinet.find())
+    return render_template("cabinet.html", cabinet=cabinet)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

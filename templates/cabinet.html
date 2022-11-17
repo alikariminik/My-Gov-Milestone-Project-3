@@ -25,8 +25,8 @@
         </ul>
     {% else %}
         <p class="center-align">
-            In order to make updates to the cabinet, you need to <a href="{{ url_for('login') }}" class="light-blue-text text-darken-4">Log In!</a>
-        <br>Not registered? <a href="{{ url_for('signup') }}" class="light-blue-text text-darken-4">Sign Up Now!</a>
+            In order to make updates to the cabinet, you need to <a href="" class="light-blue-text text-darken-4">Log In!</a>
+        <br>Not registered? <a href="" class="light-blue-text text-darken-4">Sign Up Now!</a>
         </p>
     </div>
 </div>
@@ -44,10 +44,11 @@
             <div class="cab-name">{{ cab.first_name.capitalize() }} {{ cab.last_name.capitalize() }}</div>
             <div class="cab-constituency">MP for {{ cab.constituency.title() }}</div>
             <div class="center-align">
-                <a class="btn" href="{{ url_for('edit_minister', cab_id=cab._id) }}"><i class="fa-solid fa-pen-to-square"></i></a>
-                <a class="btn" href="{{ url_for('delete_minister', cab_id=cab._id) }}"><i class="fa-solid fa-trash"></i></a>        
+                <a class="btn" href=""><i class="fa-solid fa-pen-to-square"></i></a>
+                <a class="btn" href=""><i class="fa-solid fa-trash"></i></a>        
             </div>
         </div>
     </div>
     {% endfor %}
 </div>
+{% endblock %}

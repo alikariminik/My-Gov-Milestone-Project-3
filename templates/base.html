@@ -18,7 +18,7 @@
               <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fa-solid fa-bars"></i></a>
               <ul class="right hide-on-med-and-down">
                 <li><a href="">Home</a></li>
-                <li><a href="">Cabinet</a></li>
+                <li><a href="{{ url_for('cabinet') }}">Cabinet</a></li>
                 {% if session.user %}
                     <li><a href="">Edit Minister</a></li>
                     <li><a href="">Log Out</a></li>
