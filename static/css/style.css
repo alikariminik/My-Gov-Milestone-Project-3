@@ -12,7 +12,7 @@ nav {
 }
 
  body {
-    background-color: white; 
+    background-color: rgb(1, 33, 105, 0.3); 
  }
  
  
@@ -45,7 +45,8 @@ nav {
  .option-image {
     width: 330px;
     height: 400px;
-    border-style: outset;
+    border-style:groove;
+    border-color: #C8102E;
  }
  
  .profile-box {
@@ -65,18 +66,18 @@ nav {
  }
  
  .cab-name{
-    font-family: 'lora' ,serif;
-    font-weight: 500;
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 700;
     color: black;
-    font-size: 18px;
+    font-size: 20px;
     text-align: center;
     padding: 10px 0px 10px 0px;
  }
  
  .cab-constituency{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-weight: 300;
-    font-size: 15px ;
+    font-family: 'lora', serif ;
+    font-weight: 600;
+    font-size: 16px ;
     text-align: center;
  }
  
