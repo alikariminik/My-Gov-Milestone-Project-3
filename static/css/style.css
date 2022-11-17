@@ -1,11 +1,18 @@
+/* Navbar */
 #logo{
     height: 100%;
     overflow: hidden;
     width: 100%;
  }
  
+nav {
+    background-color: #062469;
+    color: white;
+    font-weight: 500;
+}
+
  body {
-    background-color: green; 
+    background-color: white; 
  }
  
  .center-image {
@@ -63,3 +70,29 @@
     text-align: center;
  }
  
+ .flex-box-buttons{
+    display: flex;
+    justify-content:flex-end
+ }
+
+ /* Font Awesome Icons */
+
+ .edit-icon{
+    background-color: #062469;
+    color: whitesmoke;
+ }
+
+ .edit-icon:hover{
+    background-color: whitesmoke;
+    color: #062469;
+ }
+
+ .delete-icon{
+    background-color: #C8102E;
+    color: whitesmoke;
+ }
+
+ .delete-icon:hover{
+    background-color: whitesmoke;
+    color: #C8102E;
+ }

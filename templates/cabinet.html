@@ -9,24 +9,29 @@
 </header>
 
 <!-- Modal Triggers for Add, Edit or Delete Cabinet members-->
-{% if session.user %}
-<div class="row ">
-    <div class="col-s12"> 
-        <ul class="flex-box-buttons">
-            <li><a class="btn modal-trigger" onclick="$('#modal1').modal('open');">Add a New Cabinet Minister</a></li>
-            <div class="switch">Edit Mode    
-                <label>
-                  Off
-                  <input type="checkbox">
-                  <span class="lever"></span>
-                  On
-                </label>
-              </div>
-        </ul>
-    {% else %}
+{% if session.user  %}
+<div class="row flex-box-buttons ">
+    <div class="col-s10">
+        <div class="">
+            <a class="btn modal-trigger" onclick="$('#modal1').modal('open');">Add a New Cabinet Minister</a>
+        </div>
+    </div>    
+    <div class="col-s2 switch">Edit Mode
+        <label>
+            Off
+            <input type="checkbox">
+            <span class="lever"></span>
+            On
+        </label>
+    </div>
+</div>
+{% else %}
+<div class="row">
+    <div class="col-s12">
         <p class="center-align">
-            In order to make updates to the cabinet, you need to <a href="{{ url_for('login') }}" class="light-blue-text text-darken-4">Log In!</a>
-        <br>Not registered? <a href="{{ url_for('signup') }}" class="light-blue-text text-darken-4">Sign Up Now!</a>
+            In order to make updates to the cabinet, you need to <a href="{{ url_for('login') }}"
+                class="light-blue-text text-darken-4">Log In!</a>
+            <br>Not registered? <a href="{{ url_for('signup') }}" class="light-blue-text text-darken-4">Sign Up Now!</a>
         </p>
     </div>
 </div>
@@ -38,14 +43,18 @@
     <div class="col s12 m5 l4 xl3">
         <div class="profile-box">
             <div class="image-container">
-                <img class="option-image materialboxed" src="{{ cab.profile_pic }}" title="{{ cab.first_name.capitalize() }} {{ cab.last_name.capitalize() }}" alt="{{ cab.first_name.capitalize() }} {{ cab.last_name.capitalize() }}">
+                <img class="option-image materialboxed" src="{{ cab.profile_pic }}"
+                    title="{{ cab.first_name.capitalize() }} {{ cab.last_name.capitalize() }}"
+                    alt="{{ cab.first_name.capitalize() }} {{ cab.last_name.capitalize() }}">
             </div>
             <div class="cab-role">{{ cab.role.title() }}</div>
             <div class="cab-name">{{ cab.first_name.capitalize() }} {{ cab.last_name.capitalize() }}</div>
             <div class="cab-constituency">MP for {{ cab.constituency.title() }}</div>
             <div class="center-align">
-                <a class="btn" href="{{ url_for('edit_minister', cab_id=cab._id) }}"><i class="fa-solid fa-pen-to-square"></i></a>
-                <a class="btn" href="{{ url_for('delete_minister', cab_id=cab._id) }}"><i class="fa-solid fa-trash"></i></a>        
+                <a class="btn edit-icon" href="{{ url_for('edit_minister', cab_id=cab._id) }}"><i
+                        class="fa-solid fa-pen-to-square "></i></a>
+                <a class="btn delete-icon" href="{{ url_for('delete_minister', cab_id=cab._id) }}"><i
+                        class="fa-solid fa-trash "></i></a>
             </div>
         </div>
     </div>
@@ -60,17 +69,19 @@
         <div>
             <div class="row">
                 <form class="col s12" method="POST" action="{{ url_for('add_minister') }}">
-                <!----------- First Name ------------>
+                    <!----------- First Name ------------>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input placeholder="First Name" name="first_name" id="first_name" type="text" class="validate" required>
+                            <input placeholder="First Name" name="first_name" id="first_name" type="text"
+                                class="validate" required>
                             <label for="first_name">First Name</label>
                         </div>
                     </div>
                     <!----------- Last Name ------------>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input placeholder="Last Name" name="last_name" id="last_name" type="text" class="validate" required>
+                            <input placeholder="Last Name" name="last_name" id="last_name" type="text" class="validate"
+                                required>
                             <label for="last_name">Last Name</label>
                         </div>
                     </div>
@@ -95,21 +106,24 @@
                     <!----------- Minsterial Role ------------>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input placeholder="Ministerial Role" name="role" id="role" type="text" class="validate" required>
+                            <input placeholder="Ministerial Role" name="role" id="role" type="text" class="validate"
+                                required>
                             <label for="role">Ministerial Role</label>
                         </div>
                     </div>
                     <!----------- Constituency ------------>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input placeholder="Constituency" name="constituency" id="constituency" type="text" class="validate" required>
+                            <input placeholder="Constituency" name="constituency" id="constituency" type="text"
+                                class="validate" required>
                             <label for="constituency">Constituency</label>
                         </div>
                     </div>
                     <!----------- Profile Picutre ------------>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input placeholder="URL for Profile Picture" name="profile_pic" id="profile_pic" type="text" class="validate">
+                            <input placeholder="URL for Profile Picture" name="profile_pic" id="profile_pic" type="text"
+                                class="validate">
                             <label for="profile_pic">Profile Picture (URL)</label>
                         </div>
                     </div>
