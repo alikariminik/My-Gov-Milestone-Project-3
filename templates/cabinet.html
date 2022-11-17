@@ -51,4 +51,82 @@
     </div>
     {% endfor %}
 </div>
+
+<!-- Modal Structure for Add Member-->
+<div id="modal1" class="modal modal-fixed-footer">
+    <div class="modal-content">
+        <h4>Add a Cabinet Member</h4>
+        <p>Use the below form to add in a new cabinet member.</p>
+        <div>
+            <div class="row">
+                <form class="col s12" method="POST" action="{{ url_for('add_minister') }}">
+                <!----------- First Name ------------>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input placeholder="First Name" name="first_name" id="first_name" type="text" class="validate" required>
+                            <label for="first_name">First Name</label>
+                        </div>
+                    </div>
+                    <!----------- Last Name ------------>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input placeholder="Last Name" name="last_name" id="last_name" type="text" class="validate" required>
+                            <label for="last_name">Last Name</label>
+                        </div>
+                    </div>
+                    <!----------- Gender ------------>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <select id="gender" name="gender" class="validate" required>
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                            <label for="gender">Gender</label>
+                        </div>
+                    </div>
+                    <!----------- Date of Birth ------------>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input name="dob" id="dob" type="text" class="datepicker" required>
+                            <label for="dob">Date of Birth</label>
+                        </div>
+                    </div>
+                    <!----------- Minsterial Role ------------>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input placeholder="Ministerial Role" name="role" id="role" type="text" class="validate" required>
+                            <label for="role">Ministerial Role</label>
+                        </div>
+                    </div>
+                    <!----------- Constituency ------------>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input placeholder="Constituency" name="constituency" id="constituency" type="text" class="validate" required>
+                            <label for="constituency">Constituency</label>
+                        </div>
+                    </div>
+                    <!----------- Profile Picutre ------------>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input placeholder="URL for Profile Picture" name="profile_pic" id="profile_pic" type="text" class="validate">
+                            <label for="profile_pic">Profile Picture (URL)</label>
+                        </div>
+                    </div>
+                    <!----------- Submit and Cancel Buttons ------------>
+                    <div class="row">
+                        <div class="col s12 center-align">
+                            <a onclick="$('#modal1').modal('close');" class="btn-large red darken-1 text-shadow">
+                                Cancel <i class="fas fa-plus-cancel right"></i>
+                            </a>
+                            <button type="submit" class="btn-large green darken-1 text-shadow">
+                                Add Minister <i class="fas fa-plus-square right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

@@ -16,6 +16,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
+
 # Home
 @app.route("/")
 @app.route("/home")
@@ -28,6 +29,25 @@ def home():
 def cabinet():
     cabinet = list(mongo.db.cabinet.find())
     return render_template("cabinet.html", cabinet=cabinet)
+
+
+# Add Minister
+@app.route("/add_minister", methods=["GET", "POST"])
+def add_minister():
+    if request.method == "POST":
+        new_minister = {
+            "first_name": request.form.get("first_name"),
+            "last_name": request.form.get("last_name"),
+            "gender": request.form.get("gender"),
+            "dob": request.form.get("dob"),
+            "role": request.form.get("role"),
+            "constituency": request.form.get("constituency"),
+            "profile_pic": request.form.get("profile_pic"),
+        }
+        mongo.db.cabinet.insert_one(new_minister)
+        flash("Minister Successfully Added")
+
+    return redirect(url_for("cabinet"))
 
 
 if __name__ == "__main__":
