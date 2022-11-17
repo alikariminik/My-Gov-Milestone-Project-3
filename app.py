@@ -15,3 +15,9 @@ app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
+
+# Home
+@app.route("/")
+@app.route("/home")
+def home():
+    return render_template("home.html")
