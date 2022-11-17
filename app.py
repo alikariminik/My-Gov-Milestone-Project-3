@@ -145,6 +145,14 @@ def edit_minister(cab_id):
     return render_template("edit_minister.html", cab=cab)
 
 
+# Delete Minister
+@app.route("/delete_minister/<cab_id>")
+def delete_minister(cab_id):
+    mongo.db.cabinet.delete_one({"_id": ObjectId(cab_id)})
+    flash("Minister Deleted")
+    return redirect(url_for("cabinet"))
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
