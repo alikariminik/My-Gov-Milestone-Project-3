@@ -28,34 +28,36 @@
 {% endif %}
 
 <!-- Cabinet Members - wrap in a link-->
-<div class="row flex-box-cab">
+<div class="row">
     {% for cab in cabinet %}
-    <div class="col s12 m5 l4 xl3">
-        <a href="{{ url_for('cabinet_member', cab_name=cab.first_name+' '+cab.last_name) }}">
-            <div class="profile-box">
-                <div class="image-container">
-                    <img class="option-image materialboxed" src="{{ cab.profile_pic }}"
+    <div class="col s12 m5 l4 " id="adjust">
+        <div class="profile-box flex-box-ca">
+            <div class="image-container">
+                <a href="{{ url_for('cabinet_member', cab_name=cab.first_name+' '+cab.last_name) }}">
+                    <img class="option-image" src="{{ cab.profile_pic }}"
                         title="{{ cab.first_name.capitalize() }} {{ cab.last_name.capitalize() }}"
                         alt="{{ cab.first_name.capitalize() }} {{ cab.last_name.capitalize() }}">
-                </div>
-                <div class="cab-role">{{ cab.role.title() }}</div>
-                <div class="cab-name">{{ cab.first_name.title() }} {{ cab.last_name.title() }}</div>
-                <div class="cab-constituency">MP for {{ cab.constituency.title() }}</div>
-                <div class="center-align">
-                    {% if session.user  %}
-                    <a class="btn edit-icon" href="{{ url_for('edit_minister', cab_id=cab._id) }}"><i
-                            class="fa-solid fa-pen-to-square "></i></a>
-                    <a class="btn delete-icon" href="{{ url_for('delete_minister', cab_id=cab._id) }}"><i
-                            class="fa-solid fa-trash "></i></a>
-                    {% endif %}
-                </div>
+                </a>
             </div>
+            <div class="cab-role container">{{ cab.role.title() }}</div>
+            <div class="cab-name">{{ cab.first_name.title() }} {{ cab.last_name.title() }}</div>
+            <div class="cab-constituency">MP for {{ cab.constituency.title() }}</div>
+            <div class="center-align">
+                {% if session.user  %}
+                <a class="btn edit-icon" href="{{ url_for('edit_minister', cab_id=cab._id) }}"><i
+                        class="fa-solid fa-pen-to-square "></i></a>
+                <a class="btn delete-icon" href="{{ url_for('delete_minister', cab_id=cab._id) }}"><i
+                        class="fa-solid fa-trash "></i></a>
+                {% endif %}
+            </div>
+        </div>
         </a>
     </div>
     {% endfor %}
 </div>
 
 <!-- Modal Structure for Add Member-->
+
 <div id="modal1" class="modal modal-fixed-footer">
     <div class="modal-content">
         <h4>Add a Cabinet Member</h4>

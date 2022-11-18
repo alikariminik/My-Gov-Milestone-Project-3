@@ -32,7 +32,7 @@ nav {
 
  .flex-box-cab{
    display: flex;
-   justify-content: space-between;
+   justify-content:center;
  }
  
  .image-container {
@@ -50,9 +50,28 @@ nav {
  }
  
  .profile-box {
-    width: 100%;
-    height: 660px;
-    /* border-style: outset; */
+   width: 100%;
+   height: 660px;
+   /* border-style: outset; */
+ }
+ 
+ @media only screen and (min-width: 200px) and (max-width: 815px) {
+   #adjust {
+     width: 100% !important;
+   }
+ }
+
+ @media only screen and (min-width: 816px) and (max-width: 1240px) {
+   #adjust {
+     width: 50% !important;
+     height: 100%;
+   }
+ }
+
+ @media only screen and (min-width: 1540px) {
+   #adjust {
+     width: 25% !important;
+   }
  }
 
  /* Cabinet Member Profile Text Content */
