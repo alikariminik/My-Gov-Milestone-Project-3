@@ -29,6 +29,11 @@ nav {
  }
 
  /* Cabinet Member Profile Card and Picture */
+
+ .flex-box-cab{
+   display: flex;
+   justify-content: space-between;
+ }
  
  .image-container {
     padding: 10px 10px 0px 10px;
