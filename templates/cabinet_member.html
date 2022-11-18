@@ -1,17 +1,22 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="row">
-    <div class="col s12 m5 l4 xl3">
-        <div class="profile-box">
-            <div class="cab-role">{{ name }}</div>
+<div class="container">
+    <div class="row">
+        <div  style="padding-top: 30px">
+          <div class="card mycard col s12">
+            <div class="col m12 l6">
+              <img class="profile-image" src="{{ url_for('static', filename='images/larry.jpg') }}">
+            </div>
+            <div class="card-content col m12 l6">
+              <p class ="" id="synopsis"></p>
+              <p id="votes"></p>
+              <p id="interests"></p>
+            </div>
+          </div>
         </div>
-    </div>
+      </div>
 </div>
-<div>
-    <button id="apitest">Test</button>
-</div>
-
 <div>
     <p id="dataspot"></p>
 </div>

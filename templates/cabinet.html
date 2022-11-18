@@ -31,7 +31,7 @@
 <div class="row">
     {% for cab in cabinet %}
     <div class="col s12 m5 l4 " id="adjust">
-        <div class="profile-box flex-box-ca">
+        <div class="profile-box">
             <div class="image-container">
                 <a href="{{ url_for('cabinet_member', cab_name=cab.first_name+' '+cab.last_name) }}">
                     <img class="option-image" src="{{ cab.profile_pic }}"

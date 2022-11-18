@@ -23,7 +23,6 @@
               <ul class="right hide-on-med-and-down">
                 <li><a href="{{ url_for('home') }}">Home</a></li>
                 <li><a href="{{ url_for('cabinet') }}">Cabinet</a></li>
-                <li><a href="{{ url_for('test') }}">Test</a></li>
                 {% if session.user %}
                     <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                 {% else %}
@@ -35,13 +34,13 @@
           </nav>
         <!-- Mobile Navbar -->
           <ul class="sidenav" id="mobile-demo">
-            <li><a href="">Home</a></li>
-            <li><a href="">Cabinet</a></li>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('cabinet') }}">Cabinet</a></li>
             {% if session.user %}
-                <li><a href="">Log Out</a></li>
+                <li><a href="{{ url_for('logout') }}">Log Out</a></li>
             {% else %}
-                <li><a href="">Log In</a></li>
-                <li><a href="">Sign Up</a></li>
+                <li><a href="{{ url_for('login') }}">Log In</a></li>
+                <li><a href="{{ url_for('signup') }}">Sign Up</a></li>
             {% endif %}
           </ul>
     </header>
@@ -57,9 +56,10 @@
             {% endif %}
         {% endwith %}
     </section>
-
     <main class="body-padding">
         {% block content %}
+        {% endblock %}
+        {% block grizz %}
         {% endblock %}
     </main>
 

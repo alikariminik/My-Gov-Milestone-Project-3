@@ -153,17 +153,11 @@ def delete_minister(cab_id):
     return redirect(url_for("cabinet"))
 
 
-# Test - /cabinet/<cab_name>
-# <cab_name>
-@app.route("/test")
-def test():
-    cabinet = list(mongo.db.cabinet.find())
-    return render_template("test.html", cabinet=cabinet)
-
-
+# Cabinet Member Profile Page
 @app.route("/cabinet/<cab_name>")
 def cabinet_member(cab_name):
-    return render_template("cabinet_member.html", name=cab_name)
+    minister = mongo.db.cabinet.find()
+    return render_template("cabinet_member.html", name=cab_name, cabinet=cabinet)
 
 
 if __name__ == "__main__":

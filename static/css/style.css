@@ -127,7 +127,19 @@ nav {
     color: #C8102E;
  }
 
- /* Login Page */
+ /* Cabinet Member Profile Page (API) */
+ .mycard{
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+   width: 1500px;
+   margin: auto;
+   text-align: center;
+ }
+
+ .profile-image{
+   width: 100%;
+ }
+
+ /* Login Page & Sign Up Pages*/
 
  #loginbg{
    background-image: url("../images/bhop.jpg");
@@ -140,7 +152,7 @@ nav {
 }
 
 #signupbg{
-   /* background-image: url("../images/downing-street-night.jpg"); */
+   /* background-image: url("../images/downing-street-night.jpg");  */
    background-image: url("../images/larry.jpg");
    background-repeat: no-repeat;
    opacity: 0.91;
@@ -183,7 +195,7 @@ nav {
    background-color:white;
 }
 
-.cat{
+.login-card-inner{
    height: 500px;
 }
 
