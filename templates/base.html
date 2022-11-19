@@ -50,7 +50,7 @@
             {% if messages %}
                 {% for message in messages %}
                     <div class="row flashes">
-                        <h4 class="light-blue lighten-4 center-align">{{ message }}</h4>
+                        <h4 id="flash-message" style="background-color: #062469; color: white;" class="center-align">{{ message }}    <i class="fa-solid fa-x" id="flashx" onclick="removeFlash()"></i></input></h4>
                     </div>
                 {% endfor %}
             {% endif %}
@@ -63,9 +63,9 @@
         {% endblock %}
     </main>
 
+    <script src="https://kit.fontawesome.com/7a0e83662f.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
     crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/7a0e83662f.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>

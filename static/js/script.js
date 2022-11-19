@@ -11,4 +11,8 @@ window.onload = function () {
   var name = pathArray[pathArray.length-1]
 }
 
+function removeFlash() {
+  const element = document.getElementById("flash-message");
+  element.remove();
+}
 
