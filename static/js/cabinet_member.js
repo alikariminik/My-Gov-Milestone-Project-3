@@ -75,9 +75,6 @@ function parliamentAPI(name) {
                 synopsisElement.innerHTML = `<h5>Profile</h5><br>${synopsis}`;
             });
             getVotes(memberId).then(votes => {
-                // Do what you want with votes here
-                // let votesElement = document.getElementById("votes");
-                // votesElement.innerHTML = votes;
                 console.log(votes)
                 votes.forEach(function(vote) {
                     var li = document.createElement("li");
