@@ -1,18 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
 
-<!-- Header -->
-<header class="row center-align">
-    <h1>Cabinet</h1>
-    <h6>This list details those MPs of the House of Commons that hold a government post, their position and
-        constituency.</h6>
-</header>
+<!-- Title -->
+<div class="row center-align cabinet-title">
+    <h1 class="cabinet-title">The Cabinet</h1>
+    <h5>This list details those MPs of the House of Commons that hold a government post, their position and
+        constituency.</h5>
+</div>
 
-<!-- Modal Triggers for Add, Edit or Delete Cabinet members-->
+<!-- Modal Triggers for Add Cabinet members-->
 {% if session.user  %}
-<div class="row ">
-    <div class="col s10 add-member">
-        <a class="btn modal-trigger" onclick="$('#modal1').modal('open');">Add a New Cabinet Minister</a>
+<div class="row">
+    <div class="col s12 add-member flex-box-buttons">
+        <a class="btn minister-form-buttons" onclick="$('#modal1').modal('open');">Add New Cabinet Minister <i class="fas fa-plus-square right"></i></a> 
     </div>    
 </div>
 {% else %}
@@ -27,7 +27,7 @@
 </div>
 {% endif %}
 
-<!-- Cabinet Members - wrap in a link-->
+<!-- Cabinet Members -->
 <div class="row">
     {% for cab in cabinet %}
     <div class="col s12 m5 l4 " id="adjust">
@@ -58,7 +58,7 @@
 
 <!-- Modal Structure for Add Member-->
 
-<div id="modal1" class="modal modal-fixed-footer">
+<div id="modal1" class="modal mymodal">
     <div class="modal-content">
         <h4>Add a Cabinet Member</h4>
         <p>Use the below form to add in a new cabinet member.</p>
@@ -125,11 +125,11 @@
                     </div>
                     <!----------- Submit and Cancel Buttons ------------>
                     <div class="row">
-                        <div class="col s12 center-align">
-                            <a onclick="$('#modal1').modal('close');" class="btn-large red darken-1 text-shadow">
+                        <div class="col s12 center-align flex-box-buttons">
+                            <a onclick="$('#modal1').modal('close');" class="btn-large red darken-1 text-shadow minister-form-buttons">
                                 Cancel <i class="fas fa-plus-cancel right"></i>
                             </a>
-                            <button type="submit" class="btn-large green darken-1 text-shadow">
+                            <button  type="submit" class="btn-large green darken-1 text-shadow minister-form-buttons">
                                 Add Minister <i class="fas fa-plus-square right"></i>
                             </button>
                         </div>
@@ -139,5 +139,6 @@
         </div>
     </div>
 </div>
+
 
 {% endblock %}

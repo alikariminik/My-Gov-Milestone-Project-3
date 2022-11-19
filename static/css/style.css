@@ -22,13 +22,19 @@ nav {
     padding: 0 20px 0 20px;
  }
  
+
+ .mymodal{
+   max-height: 73% !important;
+   height: 73% !important;
+ }
+
  /* Add & Edit Mode */
  .add-member{
     display: flex;
     justify-content: flex-start;
  }
 
- #edit-form{
+ .edit-form{
    background-color:whitesmoke;
    z-index: 1;
  }
@@ -37,7 +43,14 @@ nav {
    font-family: 'Catamaran', sans-serif;
  }
 
+ .minister-form-buttons:hover{
+   transform: scale(1.15);
+ }
+
  /* Cabinet Member Profile Card and Picture */
+.cabinet-title{
+ font-family: 'Times New Roman', Times, serif;
+}
 
  .flex-box-cab{
    display: flex;
@@ -117,7 +130,7 @@ nav {
     justify-content:flex-end
  }
 
- /* Font Awesome Icons */
+ /* Font Awesome Edit & Delete Icons */
 
  .edit-icon{
     background-color: #062469;
@@ -137,6 +150,11 @@ nav {
  .delete-icon:hover{
     background-color: whitesmoke;
     color: #C8102E;
+ }
+
+ .flex-box-buttons{
+   display: flex;
+   justify-content: center;
  }
 
  /* Cabinet Member Profile Page (API) */

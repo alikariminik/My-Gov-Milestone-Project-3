@@ -27,7 +27,7 @@ def home():
 # Cabinet page
 @app.route("/cabinet", methods=["GET", "POST"])
 def cabinet():
-    cabinet = list(mongo.db.cabinet.find())
+    cabinet = list(mongo.db.cabinet.find().sort("no"))
     return render_template("cabinet.html", cabinet=cabinet)
 
 
@@ -107,6 +107,7 @@ def add_minister():
             "role": request.form.get("role"),
             "constituency": request.form.get("constituency"),
             "profile_pic": request.form.get("profile_pic"),
+            "no": "21",
         }
         mongo.db.cabinet.insert_one(new_minister)
         flash("Minister Successfully Added")
@@ -137,11 +138,15 @@ def edit_minister(cab_id):
 
 
 # Delete Minister
-@app.route("/delete_minister/<cab_id>")
+@app.route("/delete_minister/<cab_id>", methods=["GET", "POST"])
 def delete_minister(cab_id):
-    mongo.db.cabinet.delete_one({"_id": ObjectId(cab_id)})
-    flash("Minister Deleted")
-    return redirect(url_for("cabinet"))
+    if request.method == "POST":
+        mongo.db.cabinet.delete_one({"_id": ObjectId(cab_id)})
+        flash("Minister Deleted")
+        return redirect(url_for("cabinet"))
+
+    cab = mongo.db.cabinet.find_one({"_id": ObjectId(cab_id)})
+    return render_template("delete_minister.html", cab=cab)
 
 
 # Cabinet Member Profile Page
