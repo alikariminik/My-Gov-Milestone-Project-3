@@ -28,6 +28,15 @@ nav {
     justify-content: flex-start;
  }
 
+ #edit-form{
+   background-color:whitesmoke;
+   z-index: 1;
+ }
+
+ #edit-form > h4, p{
+   font-family: 'Catamaran', sans-serif;
+ }
+
  /* Cabinet Member Profile Card and Picture */
 
  .flex-box-cab{

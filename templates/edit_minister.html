@@ -2,10 +2,10 @@
 {% block content %}
 
 
-<div class="center-align">
-    <div>
+<div class="center-align container">
+    <div id="edit-form">
         <h4>Edit a Cabinet Member</h4>
-        <p>Use the below form to edit an exisiting cabinet minister.</p>
+        <p>Use the below form to edit the details of <b>{{cab.first_name.capitalize()}} {{cab.last_name.capitalize() }}</b>.</p>
         <div>
             <div class="row">
                 <form class="col s12" method="POST" action="{{ url_for('edit_minister', cab_id=cab._id) }}">

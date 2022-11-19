@@ -127,7 +127,8 @@ def edit_minister(cab_id):
             "constituency": request.form.get("constituency"),
             "profile_pic": request.form.get("profile_pic"),
         }
-        mongo.db.cabinet.update_one({"_id": ObjectId(cab_id)}, {"$set": updated_details})
+        mongo.db.cabinet.update_one(
+            {"_id": ObjectId(cab_id)}, {"$set": updated_details})
         flash("Minister Details Updated")
         return redirect(url_for("cabinet"))
 
@@ -147,7 +148,8 @@ def delete_minister(cab_id):
 @app.route("/cabinet/<cab_name>")
 def cabinet_member(cab_name):
     minister = mongo.db.cabinet.find()
-    return render_template("cabinet_member.html", name=cab_name, cabinet=cabinet)
+    return render_template(
+        "cabinet_member.html", name=cab_name, cabinet=cabinet)
 
 
 if __name__ == "__main__":
