@@ -29,10 +29,6 @@ nav {
  }
 
  /* Add & Edit Mode */
- .add-member{
-    display: flex;
-    justify-content: flex-start;
- }
 
  .edit-form{
    background-color:whitesmoke;
