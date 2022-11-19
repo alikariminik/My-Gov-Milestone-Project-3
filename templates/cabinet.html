@@ -34,7 +34,7 @@
         <div class="profile-box">
             <div class="image-container">
                 <a href="{{ url_for('cabinet_member', cab_name=cab.first_name+' '+cab.last_name) }}">
-                    <img class="option-image" src="{{ cab.profile_pic }}"
+                    <img class="cabinet-image" src="{{ cab.profile_pic }}"
                         title="{{ cab.first_name.capitalize() }} {{ cab.last_name.capitalize() }}"
                         alt="{{ cab.first_name.capitalize() }} {{ cab.last_name.capitalize() }}">
                 </a>
