@@ -53,11 +53,18 @@ nav {
    } 
  }
 
-/******* Add & Edit Mode *************/
+/******* Intro *************/
 .intro-text{
    font-size: 20px;
    font-family: 'lora', sans-serif;
 
+}
+
+.logged-in-box{
+   background-color: green;
+   color: whitesmoke;
+   border-color: black;
+   border-style: groove;
 }
 
 
