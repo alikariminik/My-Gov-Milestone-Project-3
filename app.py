@@ -40,7 +40,7 @@ def signup():
             {"username": request.form.get("username").lower()})
 
         if existing_user:
-            flash("Username already exists")
+            pag.alert(text="Error", title="Username already exists")
             return redirect(url_for("signup"))
 
         register = {

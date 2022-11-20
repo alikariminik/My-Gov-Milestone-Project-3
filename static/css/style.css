@@ -200,18 +200,18 @@ nav {
 
  #loginbg{
    background-image: url("../images/bhop.jpg");
-   background-repeat: no-repeat;
+   background-repeat: repeat;
    opacity: 0.95;
    overflow: hidden;
    background-position: center;
-   height: 100%;
+   max-height: 1300px;
    width: 100%;
 }
 
 #signupbg{
    /* background-image: url("../images/downing-street-night.jpg");  */
    background-image: url("../images/larry.jpg");
-   background-repeat: no-repeat;
+   background-repeat: repeat;
    opacity: 0.91;
    overflow: hidden;
    background-position: center;
@@ -220,7 +220,7 @@ nav {
 }
 
 .login-card-outer{
-   height: 700px;
+   height: 750px;
    width: 100%;
    display: flex;
    justify-content: center;
