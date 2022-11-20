@@ -4,7 +4,7 @@ Here is a link to the website [MyGovernment](https://8000-alikarimini-milestonep
 ## What is this ReadME for?
 This is the ReadMe for the website My Government UK. My Government UK is a website built using HTML, CSS and Python and the supporting framework Flask which pulls its data from a MongoDB database so that the databases' data can be viewed in a user friendly way. The site's fundamental goal is to educate people on which Members of Parliament (MPs) currently make up the UK Government.
 
-![Mockup](assets/markup/mockup-flymeto.PNG) 
+![Mockup](assets/markup/mockup-flymeto.PNG) ??????????????????????????????????????????
 
 ## Table of Contents
 * [User Experience Design (UX)](#UX)
@@ -14,15 +14,14 @@ This is the ReadMe for the website My Government UK. My Government UK is a websi
     * [The Scope Plane](#The-Scope-Plane)
     * [The Structure Plane](#The-Structure-Plane)
     * [The Skeleton Plane](#The-Skeleton-Plane)
-        * [Wireframes](#Wireframe-mockups)
+        * [Wireframes](#Wireframes)
     * [The Surface Plane](#The-Surface-Plane)
         * [Design](#design)
             * [Colour-Scheme](#colour-scheme)
             * [Imagery](#imagery)
             * [Typography](#typography)
     * [Features](#features)
-        * [UnsplashAPI](#unsplash-api)
-        * [TomTomAPI](#tomtom-api)
+        * [ParliamentAPI](#uk-parliament-api )
         * [Planned / Scrapped Features](#planned--scrapped-features)
     * [Testing](#testing)
       * [Validator Testing](#validator-testing)
@@ -116,7 +115,7 @@ Implementation:
 
 
 ### The Skeleton Plane
-#### Wireframe Mock-ups 
+#### Wireframes
 I utilised Balsamiq to produce my wireframes of how the app would appear across different devices.
 
 Mobile Device Wireframes 

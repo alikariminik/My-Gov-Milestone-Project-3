@@ -44,17 +44,21 @@
             {% endif %}
           </ul>
     </header>
-    <section>
+    <section id="flash-message">
         <!-- flash messages -->
         {% with messages = get_flashed_messages() %}
             {% if messages %}
                 {% for message in messages %}
                     <div class="row flashes">
-                        <h4 id="flash-message" style="background-color: #062469; color: white;" class="center-align">{{ message }}    <i class="fa-solid fa-x" id="flashx" onclick="removeFlash()"></i></h4>
+                        <p style="background-color: #062469; color: white; font-size: 24px ;" class="center-align">{{ message }}    <i class="fa-solid fa-x" id="flashx" onclick="removeFlash()"></i></p>
                     </div>
                 {% endfor %}
             {% endif %}
         {% endwith %}
+    </section>
+    <section>
+        {% block homepage %}
+        {% endblock %}
     </section>
     <main class="body-padding">
         {% block content %}

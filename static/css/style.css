@@ -22,41 +22,44 @@ nav {
     padding: 0 20px 0 20px;
  }
  
+/****************** Home Image  *************/
 
- .mymodal{
-   max-height: 73% !important;
-   height: 60% !important;
+/* Hero Image  */
+.hero-image-outer{
+   height: 350px;
+   width: 100%;
+} 
+.hero-image {
+   background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../images/big.jpg");
+   height: 95%;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   position: relative;
  }
 
- /* Home Page */ 
 
-.bgimg-outer{
-   height: 534px;
+ @media only screen and (min-width: 800px)  {
+   .hero-image-outer{
+      height: 450px;
+      width: 100%;
+   } 
+ }
+
+ @media only screen and (min-width: 960px)  {
+   .hero-image-outer{
+      height: 500px;
+      width: 100%;
+   } 
+ }
+
+/******* Add & Edit Mode *************/
+.intro-text{
+   font-size: 20px;
+   font-family: 'lora', sans-serif;
+
 }
 
-#bgimg1{
-   background-image: url("../images/dcameron.jpg");
-   height: fit-content;
-   background-repeat: no-repeat;
-}
-
-#bgimg2{
-   background-image: url("../images/tmay.jpg");
-   height: fit-content;
-   background-repeat: no-repeat;
-}
-
-#bgimg3{
-   background-image: url("../images/bjohnson.jpg");
-   height: fit-content;
-   background-repeat: no-repeat;
-}
-
-#bgimg4{
-   background-image: url("../images/ltruss.jpg");
-   height: fit-content;
-   background-repeat: no-repeat;
-}
 
  /* Add & Edit Mode */
 
@@ -73,6 +76,11 @@ nav {
 
  .minister-form-buttons:hover{
    transform: scale(1.15);
+ }
+
+ .mymodal{
+   max-height: 73% !important;
+   height: 60% !important;
  }
 
  /* Cabinet Member Profile Card and Picture */
@@ -151,11 +159,6 @@ nav {
     font-weight: 600;
     font-size: 18px ;
     text-align: center;
- }
- 
- .flex-box-buttons{
-    display: flex;
-    justify-content:flex-end
  }
 
  /* Font Awesome Edit & Delete Icons */
@@ -274,14 +277,14 @@ nav {
    align-items: center; 
 }
 
-.login-submit-button{
+.login-signup-button{
    color:white;
    background-color:#C8102E;
 }
 
-.login-submit-button:hover{
-   color:#C8102E;
-   background-color:white;
+.login-signup-button:hover{
+   color:#062469;
+   background-color:white !important;
 }
 
 .login-card-inner{
