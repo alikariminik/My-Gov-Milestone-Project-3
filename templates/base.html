@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Catamaran&family=Lora:wght@500&family=Poppins&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon-UK.ico') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
-    <title>MyGov</title>
+    <title>MyGovernment</title>
 </head>
 <body>
     <header>
@@ -50,7 +50,7 @@
             {% if messages %}
                 {% for message in messages %}
                     <div class="row flashes">
-                        <h4 id="flash-message" style="background-color: #062469; color: white;" class="center-align">{{ message }}    <i class="fa-solid fa-x" id="flashx" onclick="removeFlash()"></i></input></h4>
+                        <h4 id="flash-message" style="background-color: #062469; color: white;" class="center-align">{{ message }}    <i class="fa-solid fa-x" id="flashx" onclick="removeFlash()"></i></h4>
                     </div>
                 {% endfor %}
             {% endif %}
@@ -58,8 +58,6 @@
     </section>
     <main class="body-padding">
         {% block content %}
-        {% endblock %}
-        {% block grizz %}
         {% endblock %}
     </main>
 

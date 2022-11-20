@@ -31,7 +31,7 @@ def cabinet():
     return render_template("cabinet.html", cabinet=cabinet)
 
 
-# Sign Up page
+# Sign Up page (Code from CodeInstitute Lessons)
 @app.route("/signup", methods=["GET", "POST"])
 def signup():
     if request.method == "POST":
@@ -40,7 +40,7 @@ def signup():
             {"username": request.form.get("username").lower()})
 
         if existing_user:
-            pag.alert(text="Error", title="Username already exists")
+            flash("Username already exists")
             return redirect(url_for("signup"))
 
         register = {
@@ -57,7 +57,7 @@ def signup():
     return render_template("signup.html")
 
 
-# Log in page
+# Log in page (Code from CodeInstitute Lessons)
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -86,7 +86,7 @@ def login():
     return render_template("login.html")
 
 
-# Log out
+# Log out (Code from CodeInstitute Lessons)
 @app.route("/logout")
 def logout():
     # remove user from session cookie
@@ -102,8 +102,6 @@ def add_minister():
         new_minister = {
             "first_name": request.form.get("first_name"),
             "last_name": request.form.get("last_name"),
-            "gender": request.form.get("gender"),
-            "dob": request.form.get("dob"),
             "role": request.form.get("role"),
             "constituency": request.form.get("constituency"),
             "profile_pic": request.form.get("profile_pic"),
@@ -122,8 +120,6 @@ def edit_minister(cab_id):
         updated_details = {
             "first_name": request.form.get("first_name"),
             "last_name": request.form.get("last_name"),
-            "gender": request.form.get("gender"),
-            "dob": request.form.get("dob"),
             "role": request.form.get("role"),
             "constituency": request.form.get("constituency"),
             "profile_pic": request.form.get("profile_pic"),

@@ -3,7 +3,7 @@
 
 
 <div class="center-align container">
-    <div class="edit-form">
+    <div class="delete-form-style">
         <h4>Delete a Cabinet Member</h4>
         <p>Are you sure you want to delete the record for <b>{{cab.first_name.capitalize()}}
                 {{cab.last_name.capitalize() }}?</b>.</p>
@@ -25,24 +25,6 @@
                                 <input value="{{ cab.last_name.capitalize() }}" placeholder="Last Name" name="last_name"
                                     id="last_name" type="text" class="validate" required>
                                 <label for="last_name"></label>
-                            </div>
-                        </div>
-                        <!----------- Gender ------------>
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <select id="gender" name="gender" class="validate" required>
-                                    <option value="{{ cab.gender.capitalize() }}" selected>
-                                    {{ cab.gender.capitalize() }}</option>
-                                </select>
-                                <label for="gender">Gender</label>
-                            </div>
-                        </div>
-                        <!----------- Date of Birth ------------>
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <input value="{{ cab.dob }}" name="dob" id="dob" type="text" class="datepicker"
-                                    required>
-                                <label for="dob">Date of Birth</label>
                             </div>
                         </div>
                         <!----------- Minsterial Role ------------>
@@ -72,7 +54,7 @@
                     </fieldset>
                         <!----------- Submit and Cancel Buttons ------------>
                         <div class="row">
-                            <div class="col s12 center-align">
+                            <div class="col s12 center-align flex-box-buttons">
                                 <a href="{{ url_for('cabinet') }}"
                                     class="btn-large grey lighten-1 text-shadow minister-form-buttons">
                                     Cancel <i class="fas fa-plus-cancel right"></i>

@@ -1,8 +1,14 @@
-const getSynopsisUrl = (memberId) => `https://members-api.parliament.uk/api/Members/${memberId}/Synopsis`
-const getVotingUrl = (memberId) => `https://members-api.parliament.uk/api/Members/${memberId}/Voting?house=1`
-const getMemberUrl = (name) => `https://members-api.parliament.uk/api/Members/Search?Name=${name}&skip=0&take=20`
-const getPhotoUrl = (memberId) => `https://members-api.parliament.uk/api/Members/${memberId}/ThumbnailUrl
-`
+const getSynopsisUrl = (memberId) =>
+`https://members-api.parliament.uk/api/Members/${memberId}/Synopsis`;
+
+const getVotingUrl = (memberId) =>
+`https://members-api.parliament.uk/api/Members/${memberId}/Voting?house=1`;
+
+const getMemberUrl = (name) =>
+`https://members-api.parliament.uk/api/Members/Search?Name=${name}&skip=0&take=20`;
+
+const getPhotoUrl = (memberId) =>
+`https://members-api.parliament.uk/api/Members/${memberId}/ThumbnailUrl`;
 
 const getParliamentMemberId = (name) => {
     return new Promise((resolve, reject) => {
@@ -15,7 +21,7 @@ const getParliamentMemberId = (name) => {
             })
             .catch((err) => reject(err));
     });
-}
+};
 
 
 const getPhoto = (memberId) => {
@@ -23,11 +29,11 @@ const getPhoto = (memberId) => {
         fetch(getPhotoUrl(memberId))
         .then((response) => response.json())
         .then((data) => {
-            resolve(data.value)
+            resolve(data.value);
         })
         .catch((err) => reject(err));
     });
-}
+};
 
 
 const getSynopsis = (memberId) => {
@@ -35,39 +41,40 @@ const getSynopsis = (memberId) => {
         fetch(getSynopsisUrl(memberId))
         .then((response) => response.json())
         .then((data) => {
-            console.log(data)
+            console.log(data);
             console.log(data.value);
             resolve(data.value);
         })
         .catch((err) => reject(err));
     });
-}
+};
 
 const getVotes = (memberId) => {
     return new Promise((resolve, reject) => {
         fetch(getVotingUrl(memberId))
         .then((response) => response.json())
         .then((data) => {
-            console.log(data)
+            console.log(data);
             console.log(data.items.slice(0, 5));
-            dogs = data.items.slice(0, 5);
+            votingResults = data.items.slice(0, 5);
 
-            resolve(dogs.map(dog => ({ 
-                inAffirmativeLobby: dog.value.inAffirmativeLobby,
-                numberAgainst: dog.value.numberAgainst,
-                numberInFavour: dog.value.numberInFavour,
-                title: dog.value.title,
+            resolve(votingResults.map(results => ({
+                inAffirmativeLobby: results.value.inAffirmativeLobby,
+                numberAgainst: results.value.numberAgainst,
+                numberInFavour: results.value.numberInFavour,
+                title: results.value.title,
                 })));
         })
         .catch((err) => reject(err));
     });
-}
+};
 
 
-const covertInAffirmativeLobby = (inAffirmativeLobby) => inAffirmativeLobby ? "Aye": "No";
+const covertInAffirmativeLobby = (inAffirmativeLobby) =>
+inAffirmativeLobby ? "Aye": "No";
 
 function parliamentAPI(name) {
-    
+
     getParliamentMemberId(name)
         .then((memberId) => {
             getSynopsis(memberId).then(synopsis => {
@@ -78,8 +85,11 @@ function parliamentAPI(name) {
                 console.log(votes)
                 votes.forEach(function(vote) {
                     var li = document.createElement("li");
-                    var text = document.createTextNode( 
-                        `${vote.title}: ${covertInAffirmativeLobby(vote.inAffirmativeLobby)} (For: ${vote.numberInFavour} vs Against: ${vote.numberAgainst}) `);
+                    var text = document.createTextNode(
+                    `${vote.title}:
+                    ${covertInAffirmativeLobby(vote.inAffirmativeLobby)}
+                    (For: ${vote.numberInFavour} vs Against:
+                    ${vote.numberAgainst}) `);
                     li.appendChild(text);
                     document.getElementById("votes").appendChild(li);
                   });
@@ -94,11 +104,11 @@ function parliamentAPI(name) {
         })
   };
 
-var pathArray = window.location.pathname.split('/');
+var pathArray = window.location.pathname.split("/");
 var name = pathArray[pathArray.length-1];
 if (name == "David%20T%20C%20Davies") {
     name= "David%20T%20C"
-    parliamentAPI(name)
+    parliamentAPI(name);
   } else {
-    parliamentAPI(name)
-  }
+    parliamentAPI(name);
+  };
