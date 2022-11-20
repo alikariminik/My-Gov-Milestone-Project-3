@@ -4,7 +4,7 @@ Here is a link to the website [MyGovernment](https://8000-alikarimini-milestonep
 ## What is this ReadME for?
 This is the ReadMe for the website My Government UK. My Government UK is a website built using HTML, CSS and Python and the supporting framework Flask which pulls its data from a MongoDB database so that the databases' data can be viewed in a user friendly way. The site's fundamental goal is to educate people on which Members of Parliament (MPs) currently make up the UK Government.
 
-![Mockup](assets/markup/mockup-flymeto.PNG) ??????????????????????????????????????????
+![Mockup](static/mockup/mockup.png)
 
 ## Table of Contents
 * [User Experience Design (UX)](#UX)
@@ -120,17 +120,17 @@ I utilised Balsamiq to produce my wireframes of how the app would appear across 
 
 Mobile Device Wireframes 
  
- ![Mobile Device Home](static/wireframes/wireframe-desktop-home.PNG)
- ![Mobile Device Cabinet](static/wireframes/wireframe-desktop-cabinet.PNG)
+ ![Mobile Device Home](static/wireframes/wireframe-desktop-home.png)
+ ![Mobile Device Cabinet](static/wireframes/wireframe-desktop-cabinet.png)
 
 Tablet Device Wireframes
 
- ![Tablet Device Home](static/wireframes/wireframe-desktop-home.PNG)
- ![Tablet Device Cabinet](static/wireframes/wireframe-desktop-cabinet.PNG)
+ ![Tablet Device Home](static/wireframes/wireframe-desktop-home.png)
+ ![Tablet Device Cabinet](static/wireframes/wireframe-desktop-cabinet.png)
 
 Desktop Device Wireframes
- ![Desktop Device Home](static/wireframes/wireframe-desktop-home.PNG)
- ![Desktop Device Cabinet](static/wireframes/wireframe-desktop-cabinet.PNG)
+ ![Desktop Device Home](static/wireframes/wireframe-desktop-home.png)
+ ![Desktop Device Cabinet](static/wireframes/wireframe-desktop-cabinet.png)
 
 ### The Surface Plane
 
