@@ -4,6 +4,7 @@ $(document).ready(function () {
   $('#modal2').modal();
   $('select').formSelect();
   $('.materialboxed').materialbox();
+  $('.carousel').carousel();
 });
 
 

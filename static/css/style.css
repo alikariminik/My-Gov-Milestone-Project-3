@@ -28,6 +28,24 @@ nav {
    height: 73% !important;
  }
 
+ /* Home Page */ 
+.hero-image-outer{
+   display: flex;
+   flex-direction: column;
+   background-image:url("../images/bhop.jpg");
+   height:60vh;
+   align-self: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-attachment: fixed;
+   align-items: center;
+   justify-content: center;
+}
+ 
+ body, html {
+   height: 100%;
+}
+
  /* Add & Edit Mode */
 
  .edit-form{
