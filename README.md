@@ -2,7 +2,7 @@
 Here is a link to the website [MyGovernment](https://my-uk-government.herokuapp.com/home)
 
 ## What is this ReadME for?
-This is the ReadMe for the website My Government UK. My Government UK is a website built using HTML, CSS and Python and the supporting framework Flask which pulls its data from a MongoDB database so that the databases' data can be viewed in a user friendly way. The site's fundamental goal is to educate people on which Members of Parliament (MPs) currently make up the UK Government.
+This is the ReadMe for the website My Government UK. My Government UK is a website built using HTML, CSS and Python and the supporting framework Flask which pulls its data from a MongoDB database so that the databases' data can be viewed in a user-friendly way. The site's fundamental goal is to educate people on which Members of Parliament (MPs) currently make up the UK Government.
 
 ![Mockup](static/mockup/mockup.png)
 
@@ -37,7 +37,7 @@ This is the ReadMe for the website My Government UK. My Government UK is a websi
 ## UX
 
 ### The Strategy Plane
-* My inspiration for deciding to build this website came from the recent events in UK Politics. Since September 2022, the UK has had 3 different Prime Ministers (PMs) and with each change-over there have been dozens of sackings, re-appointments and new appointments of Cabinet Ministers - the team of the most senior ministers in the Government who are chosen by the Prime Minister to lead on specific policy areas such as Health, Transport, Foreign Affairs or Defence. With the vast number of changes in Government, I wanted to build a website where users can easily view who are currently the members of the cabinet who would be devising government policy on the most important areas that affects everyones lives in the UK. This increased awareness of who these individuals are aims to improve the accountability of those individuals and the government overall on the outcome of the policies they have lead on.
+* My inspiration for deciding to build this website came from the recent events in UK Politics. Since September 2022, the UK has had 3 different Prime Ministers (PMs) and with each change-over there have been dozens of sackings, re-appointments and new appointments of Cabinet Ministers - the team of the most senior ministers in the Government who are chosen by the Prime Minister to lead on specific policy areas such as Health, Transport, Foreign Affairs or Defence. With the vast number of changes in Government, I wanted to build a website where users can easily view who are currently the members of the cabinet who would be devising government policy on the most important areas that affects everyone's lives in the UK. This increased awareness of who these individuals are aims to improve the accountability of those individuals and the government overall on the outcome of the policies they have lead on.
 
 
 #### Site Goals
@@ -142,11 +142,11 @@ The colour scheme I opted to use represent the colours of the union jack. The He
 ##### Typography
 I used the  'Times New Roman', font for title 'The Cabinet' with 'Times & sans-serif;' as the fallback font in case for any reason the font isn't being imported into the site correctly. I found 'Times New Roman' gave this page title a historical feeling which is meant to covey the ancientness of The UK Cabinet which was first formed 1644.
 
-I used the font 'Poppins', with 'sans-serif' as the fallback, for the Cabinet Members role title and also on the cabinet members profile card as I thought this font had a strong and important look relative to the other fonts used. The information charactarised within this font are considered to be the key information on the cabinet members i.e. their role, bio, and recent voting records. 'Poppins' was obtained from Google Fonts.
+I used the font 'Poppins', with 'sans-serif' as the fallback, for the Cabinet Members role title and also on the cabinet members profile card as I thought this font had a strong and important look relative to the other fonts used. The information characterised within this font are considered to be the key information on the cabinet members i.e. their role, bio, and recent voting records. 'Poppins' was obtained from Google Fonts.
 
 I used the font 'Catamaran', with 'sans-serif' as the fallback, for the Cabinet Members' Name as when trialling different fonts between the Role Title ('Poppins') and Constituency ('Lora') this font looked neat and clear. I also used for the titles and text on the forms as it again gave a clear and tidy visual. On the Delete_Minister Form, the weight is increased in conjunction with the different coloured background to warn the that this is the delete form to avoid accidental deletions of data. 'Catamaran' was obtained from Google Fonts.
 
-I used the font 'lora', with 'sans-serif' as the fallback, for the cabinet members constituency as I felt this gave a softer and less prominent look than the fonts for their name and role. This is intentional as the constituency took less precendence over the cabinet posiiton.  'Lora' was obtained from Google Fonts.
+I used the font 'lora', with 'sans-serif' as the fallback, for the cabinet members constituency as I felt this gave a softer and less prominent look than the fonts for their name and role. This is intentional as the constituency took less precedence over the cabinet position.  'Lora' was obtained from Google Fonts.
 
 [Google Fonts](https://fonts.google.com/)
 
@@ -171,7 +171,7 @@ I had further ideas for additional features for this application but, due to tim
 
 I would have liked to have expanded the database to include additional cabinet attendees who are not deemed as Cabinet Ministers. Additionally, I would have liked to have added a filter option so that the user can show only a list of Cabinet members by a given condition - e.g. Age over 40, Ministers by Department, Gender etc.  
 
-Further to this, I would have liked to expand the Cabinet_member.html page to obtian more details on the Cabinet Members from the API Calls. 
+Further to this, I would have liked to expand the Cabinet_member.html page to obtain more details on the Cabinet Members from the API Calls. 
 
 ### Languages Used
 
@@ -244,7 +244,7 @@ I then asked my partner to follow the above steps and let me know what she finds
 
 ### Responsiveness
 
-Vigorous testing was conducted throughout the development process to ensure that the site maintained responsiveness as more elements were added on. Using developer tools and adjusting screen dimensions, I have checked to ensure that all content displays clearly over a variety  of screen sizes - primarily on the Mobile, Tablet and Monitors. As mentioned above, media queries were added to correct responsiveness failings from Materialize. 
+Vigorous testing was conducted throughout the development process to ensure that the site maintained responsiveness as more elements were added on. Using developer tools and adjusting screen dimensions, I have checked to ensure that all content displays clearly over a variety of screen sizes - primarily on the Mobile, Tablet and Monitors. As mentioned above, media queries were added to correct responsiveness failings from Materialize. 
 
 
 ### Known Bugs
@@ -268,7 +268,7 @@ Forking
 
 Cloning
 * On GitHub.com, navigate to your fork of the https://github.com/alikariminik/My-Gov-Milestone-Project-3 repository.
-* Above the list of files, click  Code.
+* Above the list of files, click Code.
 * Copy the URL for the repository.
 * Open Git Bash.
 * Change the current working directory to the location where you want the cloned directory.
