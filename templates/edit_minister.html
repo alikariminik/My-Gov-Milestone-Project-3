@@ -12,7 +12,7 @@
                     <!----------- First Name ------------>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input value="{{ cab.first_name.capitalize() }}" placeholder="First Name" name="first_name"
+                            <input value="{{ cab.first_name.capitalize() }}" pattern="[A-Za-z]{30}" placeholder="First Name" name="first_name"
                                 id="first_name" type="text" class="validate" required>
                             <label for="first_name">First Name</label>
                         </div>
@@ -20,7 +20,7 @@
                     <!----------- Last Name ------------>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input value="{{ cab.last_name.capitalize() }}" placeholder="Last Name" name="last_name"
+                            <input value="{{ cab.last_name.capitalize() }}" pattern="[A-Za-z]{30}" placeholder="Last Name" name="last_name"
                                 id="last_name" type="text" class="validate" required>
                             <label for="last_name">Last Name</label>
                         </div>
@@ -28,7 +28,7 @@
                     <!----------- Minsterial Role ------------>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input value="{{ cab.role.title() }}" placeholder="Ministerial Role" name="role" id="role"
+                            <input value="{{ cab.role.title() }}" pattern="[A-Za-z]{70}" placeholder="Ministerial Role" name="role" id="role"
                                 type="text" class="validate" required>
                             <label for="role">Ministerial Role</label>
                         </div>
@@ -36,7 +36,7 @@
                     <!----------- Constituency ------------>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input value="{{ cab.constituency.title() }}" placeholder="Constituency" name="constituency"
+                            <input value="{{ cab.constituency.title() }}" pattern="[A-Za-z]{70}" placeholder="Constituency" name="constituency"
                                 id="constituency" type="text" class="validate" required>
                             <label for="constituency">Constituency</label>
                         </div>

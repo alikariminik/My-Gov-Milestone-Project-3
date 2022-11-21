@@ -23,6 +23,7 @@ This is the ReadMe for the website My Government UK. My Government UK is a websi
     * [Features](#features)
         * [ParliamentAPI](#uk-parliament-api )
         * [Planned / Scrapped Features](#planned--scrapped-features)
+    * [DataSchema](#data-schema)
     * [Testing](#testing)
       * [Validator Testing](#validator-testing)
       * [Responsiveness](#responsiveness)
@@ -192,6 +193,19 @@ Further to this, I would have liked to expand the Cabinet_member.html page to ob
 -   [MongoDB:](https://www.mongodb.com/)
     - The Non-Relational Database was hosted on MongoDB and its data is obtained through the use of PyMongo.
 
+## Data Schema
+  ### Users
+  - username: String
+  - password: String
+
+  ### Cabinet 
+  - first_name: String
+  - last_name: String
+  - role: String
+  - constituency: String
+  - profile_pic: String
+  - no : Integer
+  
 ## Testing 
 During testing of my site, I incorporated a Behaviour Driven Development (BDD). Through my continuous BDD testing, I was able to identify issues with my site such as: problems relating to responsiveness which was fixed through additional media queries which can be found in [style.css](static/css/style.css).
 
