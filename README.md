@@ -238,19 +238,22 @@ Vigorous testing was conducted throughout the development process to ensure that
 
 ## Deployment
 
-* The site was deployed to GitHub pages. The steps to deploy the site are as follows:
-  * In the GitHub repository, navigate to the "settings" tab
-  * Select the pages link from the setting menu on the left hand side 
-  * Under the GitHub Pages from the source section drop-down menu, select the master branch 
-  * Once the master branch has been selected, click on "save".
+* The site was deployed to Heroku and automatic updates to the code were done through enabling automatic deploys from GitHub. The steps to deploy the site are as follows:
+  * Create a new app on Heroku
+  * Click on the Settings tab and add in the Config Vars from the env.py - which is not pushed to GitHub and remain secret within the Heroku app.
+  * Click on the Deploy tab and then under Deployment method, select GitHub.
+  * Search and select the My-Gov-Milestone-Project-3 repository.
+  * Select Enable Automatic Deploys
+  * Select Master Branch and then Click on Deploy Branch.
+
 
 ### Forking and Cloning
 Forking 
-* On GitHub.com navigate to https://github.com/alikariminik/Milestone-Project-Two repository.
+* On GitHub.com navigate to https://github.com/alikariminik/My-Gov-Milestone-Project-3 repository.
 * In the top-right corner of the page, click "fork"
 
 Cloning
-* On GitHub.com, navigate to your fork of the Milestone-Project-Two repository.
+* On GitHub.com, navigate to your fork of the https://github.com/alikariminik/My-Gov-Milestone-Project-3 repository.
 * Above the list of files, click  Code.
 * Copy the URL for the repository.
 * Open Git Bash.
