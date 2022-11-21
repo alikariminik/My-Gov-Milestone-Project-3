@@ -67,7 +67,10 @@ nav {
    border-style: groove;
 }
 
-
+.signup-button:hover, .signup-button:focus {
+   background-color: whitesmoke !important;
+   color: green;
+}
  /* Add & Edit Mode */
 
  .form-style{
@@ -81,7 +84,7 @@ nav {
    font-weight: 700;
  }
 
- .minister-form-buttons:hover{
+ .minister-form-buttons:hover, .minister-form-buttons:focus{
    transform: scale(1.15);
  }
 
@@ -114,8 +117,9 @@ nav {
     border-color: #C8102E;
  }
 
- .cabinet-image:hover {
+ .cabinet-image:hover, .cabinet-image:focus {
    opacity: 0.7;
+   transform: scale(1.05);
 }
  
  .profile-box {
@@ -175,7 +179,7 @@ nav {
     color: whitesmoke;
  }
 
- .edit-icon:hover{
+ .edit-icon:hover, .edit-icon:focus{
     background-color: whitesmoke;
     color: #062469;
  }
@@ -185,7 +189,7 @@ nav {
     color: whitesmoke;
  }
 
- .delete-icon:hover{
+ .delete-icon:hover, .delete-icon:focus{
     background-color: whitesmoke;
     color: #C8102E;
  }
@@ -227,6 +231,10 @@ nav {
 #synopsis > h5{
    font-weight: 500;
    padding-top: 5px;
+}
+
+#synopsis > a {
+   color: rgb(11, 11, 165);
 }
 
 #votes > h5{
@@ -289,7 +297,7 @@ nav {
    background-color:#C8102E;
 }
 
-.login-signup-button:hover{
+.login-signup-button:hover, .login-signup-button:focus {
    color:#062469;
    background-color:white !important;
 }
@@ -308,6 +316,7 @@ nav {
 
  /* Flash Messages */
 
- #flashx:hover{
+ #flashx:hover, #flashx:focus{
    color: #C8102E;
+   transform: scale(1.05);
  }

@@ -10,6 +10,15 @@ const getMemberUrl = (name) =>
 const getPhotoUrl = (memberId) =>
 `https://members-api.parliament.uk/api/Members/${memberId}/ThumbnailUrl`;
 
+const HREF = `https://members.parliament.uk`
+
+function fixLink() {
+    anchor11 = document.getElementsByTagName("a")[10];
+    apiLink = anchor11.getAttribute("href");
+    fullLink = HREF + apiLink;
+    anchor11.setAttribute("href", fullLink);
+}
+
 const getParliamentMemberId = (name) => {
     return new Promise((resolve, reject) => {
         fetch(getMemberUrl(name))
@@ -42,7 +51,6 @@ const getSynopsis = (memberId) => {
         .then((response) => response.json())
         .then((data) => {
             console.log(data);
-            console.log(data.value);
             resolve(data.value);
         })
         .catch((err) => reject(err));
@@ -79,7 +87,8 @@ function parliamentAPI(name) {
         .then((memberId) => {
             getSynopsis(memberId).then(synopsis => {
                 synopsisElement = document.getElementById("synopsis");
-                synopsisElement.innerHTML = `<h5>Profile</h5><br>${synopsis}`;
+                synopsisElement.innerHTML = `<h5>Profile</h5><br>${synopsis}`
+                fixLink();
             });
             getVotes(memberId).then(votes => {
                 console.log(votes)
@@ -103,6 +112,7 @@ function parliamentAPI(name) {
             console.error(err);
         })
   };
+
 
 var pathArray = window.location.pathname.split("/");
 var name = pathArray[pathArray.length-1];
