@@ -18,8 +18,8 @@ This is the ReadMe for the website My Government UK. My Government UK is a websi
     * [The Surface Plane](#The-Surface-Plane)
         * [Design](#design)
             * [Colour-Scheme](#colour-scheme)
-            * [Imagery](#imagery)
             * [Typography](#typography)
+            * [Imagery](#imagery)
     * [Features](#features)
         * [ParliamentAPI](#uk-parliament-api )
         * [Planned / Scrapped Features](#planned--scrapped-features)
@@ -37,7 +37,7 @@ This is the ReadMe for the website My Government UK. My Government UK is a websi
 ## UX
 
 ### The Strategy Plane
-* My inspiration for deciding to build this website came from the recent events in UK Politics. Since September 2022, the UK has had 3 different Prime Ministers (PMs) and with each change-over there have been dozens of sackings, re-appointments and new appointments of Cabinet Ministers - the team of the most senior ministers in the Government who are chosen by the Prime Minister to lead on specific policy areas such as Health, Transport, Foreign Affairs or Defence. With the vast number of changes in Government, I wanted to build a website where users can easily view who are currently the members of the cabinet who would be devising government policy on the most important areas that affects everyone's lives in the UK. This increased awareness of who these individuals are aims to improve the accountability of those individuals and the government overall on the outcome of the policies they have lead on.
+* My inspiration for deciding to build this website came from the recent events in UK Politics. Since September 2022, the UK has had 3 different Prime Ministers (PMs) and with each change-over there have been dozens of sackings, re-appointments and new appointments of Cabinet Ministers - the team of the most senior ministers in the Government who are chosen by the Prime Minister to lead on specific policy areas such as Health, Transport, Foreign Affairs or Defence. With the vast number of changes in Government, I wanted to build a website where users can easily view who are currently the members of the cabinet who would be devising government policy on the most important areas that affects everyone's lives in the UK. Through increased awareness of who these individuals are, I aim to improve the accountability of those individuals and the overall government's outcome on the policies they have lead on.
 
 
 #### Site Goals
@@ -144,7 +144,7 @@ I used the  'Times New Roman', font for title 'The Cabinet' with 'Times & sans-s
 
 I used the font 'Poppins', with 'sans-serif' as the fallback, for the Cabinet Members role title and also on the cabinet members profile card as I thought this font had a strong and important look relative to the other fonts used. The information characterised within this font are considered to be the key information on the cabinet members i.e. their role, bio, and recent voting records. 'Poppins' was obtained from Google Fonts.
 
-I used the font 'Catamaran', with 'sans-serif' as the fallback, for the Cabinet Members' Name as when trialling different fonts between the Role Title ('Poppins') and Constituency ('Lora') this font looked neat and clear. I also used for the titles and text on the forms as it again gave a clear and tidy visual. On the Delete_Minister Form, the weight is increased in conjunction with the different coloured background to warn the that this is the delete form to avoid accidental deletions of data. 'Catamaran' was obtained from Google Fonts.
+I used the font 'Catamaran', with 'sans-serif' as the fallback, for the Cabinet Members' Name as when trialling different fonts between the Role Title ('Poppins') and Constituency ('Lora') this font looked neat and clear. I also used for the titles and text on the forms as it again gave a clear and tidy visual. On the Delete_Minister Form, the weight is increased in conjunction with the different coloured background to warn the user that this is the delete form to avoid accidental deletions of data. 'Catamaran' was obtained from Google Fonts.
 
 I used the font 'lora', with 'sans-serif' as the fallback, for the cabinet members constituency as I felt this gave a softer and less prominent look than the fonts for their name and role. This is intentional as the constituency took less precedence over the cabinet position.  'Lora' was obtained from Google Fonts.
 
@@ -159,7 +159,7 @@ For the Sign up page, I have used a colourful image of the front door of 10 Down
 
 ## Features
 ### UK Parliament API 
-In addition to the information being displayed on the Cabinet.html page, I wanted to go a step further and provide some further details regarding the MPs. I found that there was an official free API for the UK Parliament which allowed me to request information on all the Cabinet Members. I decided to create a new pape cabinet_member.html in order to display the details here. The code for this API functionality can be found in cabinet_member.js. When a user clicks on the portrait photo of a Cabinet Minister, that Cabinet Ministers unique page opens with all the information on the page pulled from the API. 
+In addition to the information being displayed on the Cabinet.html page, I wanted to go a step further and provide some further details regarding the MPs. I found that there was an official free API for the UK Parliament which allowed me to request information on all the Cabinet Members. I decided to create a new page cabinet_member.html in order to display the details here. The code for this API functionality can be found in cabinet_member.js. When a user clicks on the portrait photo of a Cabinet Minister, that Cabinet Ministers unique page opens with all the information on the page pulled from the API. 
 
 I found this API to be quite easy to use and I enjoyed working with it. 
 
@@ -189,7 +189,7 @@ Further to this, I would have liked to expand the Cabinet_member.html page to ob
 -   [Font Awesome:](https://fontawesome.com/)
     - Font Awesome icons were used across the pages which acted as buttons to aid navigation for the user. The Font Awesome Icons themselves were also added for aesthetic and UX purposes.
 -   [Flask:](https://flask.palletsprojects.com/en/2.2.x/)
-    - The Flask framework was used to build this application and allowed for seemingless templating and navigation across the apps various pages.
+    - The Flask framework was used to build this application and allowed for seamless templating and navigation across the apps various pages.
 -   [MongoDB:](https://www.mongodb.com/)
     - The Non-Relational Database was hosted on MongoDB and its data is obtained through the use of PyMongo.
 
@@ -213,7 +213,7 @@ After having added in all of the websites pages, I devised a step-by-step guide 
 1. Open the website - *check to see if all of the contents load successfully - this will be done on every subsequent page opened
 2. Click on the "Sign Up!" button.
 3. Create a new account and attempt to create one which does not meet the password minimum character requirements. Ensure log in directs back to the Home Page.
-4. Check that the "You are already logged in!" message shows where the "Sign Up" and "Log In" buttons originally were. Click "Log Out". Check that Log Out Flash Message shows and is closeable by clicking on the X icon.
+4. Check that the "You are already logged in!" flash message shows where the "Sign Up" and "Log In" buttons originally were. Click "Log Out". Check that the Log Out Flash Message shows and that this can be closed by clicking on the X icon.
 5. Try to Sign up a new account using the same account name as the already created one to ensure that this does not accept a new account creation.
 6. Click on the "Log In" page. Try logging in with incorrect account and password details to ensure this fails. Try again with correct Account Name and incorrect password. Ensure the same flash message appears so that it is not distinguishable whether the password or account name was wrong.
 7. Log In correctly.
@@ -283,7 +283,7 @@ Cloning
 - [CodeInstitute-ReadME](https://github.com/Code-Institute-Solutions/SampleREADME)
 
 #### Code
-- In the app.py file, the code for Login, Registration and Log Out have been adapted for use from the CodeInstitute lessons which wallktthrough on how to create an account with the aid of Werkzeug. This is mentioned in the comments on this file on Lines 34, 60 & 89.
+- In the app.py file, the code for Login, Registration and Log Out have been adapted for use from the CodeInstitute lessons which provide a walkthrough on how to create an account with the aid of Werkzeug. This is mentioned in the comments on this file on Lines 34, 60 & 89.
 
 #### Media 
 - [HeroImage:PrimeMinisterLizTrussResigns] https://www.flickr.com/photos/number10gov/52441645784/in/faves-196955694@N02/ Number 10 Flickr account
