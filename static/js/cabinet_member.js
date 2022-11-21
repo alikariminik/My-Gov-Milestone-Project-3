@@ -13,10 +13,12 @@ const getPhotoUrl = (memberId) =>
 const HREF = `https://members.parliament.uk`
 
 function fixLink() {
-    anchor11 = document.getElementsByTagName("a")[10];
-    apiLink = anchor11.getAttribute("href");
-    fullLink = HREF + apiLink;
-    anchor11.setAttribute("href", fullLink);
+    targetDiv = document.querySelector("#synopsis");
+    targetDivATag = targetDiv.children[2];
+    anchorTagLink = targetDivATag.getAttribute("href");
+    fullLink = HREF + anchorTagLink;
+    constituencyLink = targetDivATag.setAttribute("href", fullLink);
+    constituencyLink = targetDivATag.setAttribute('target', '_blank');
 }
 
 const getParliamentMemberId = (name) => {

@@ -27,8 +27,12 @@ def home():
 # Cabinet page
 @app.route("/cabinet", methods=["GET", "POST"])
 def cabinet():
-    cabinet = list(mongo.db.cabinet.find().sort("no"))
-    return render_template("cabinet.html", cabinet=cabinet)
+    try:
+        cabinet = list(mongo.db.cabinet.find().sort("no"))
+        return render_template("cabinet.html", cabinet=cabinet)
+    except ConnectionError:
+        raise Exception(
+            'There has been an error connecting to the Mongo Database')
 
 
 # Sign Up page (Code from CodeInstitute Lessons)
@@ -99,16 +103,20 @@ def logout():
 @app.route("/add_minister", methods=["GET", "POST"])
 def add_minister():
     if request.method == "POST":
-        new_minister = {
-            "first_name": request.form.get("first_name"),
-            "last_name": request.form.get("last_name"),
-            "role": request.form.get("role"),
-            "constituency": request.form.get("constituency"),
-            "profile_pic": request.form.get("profile_pic"),
-            "no": "21",
-        }
-        mongo.db.cabinet.insert_one(new_minister)
-        flash("Minister Successfully Added")
+        try:
+            new_minister = {
+                "first_name": request.form.get("first_name"),
+                "last_name": request.form.get("last_name"),
+                "role": request.form.get("role"),
+                "constituency": request.form.get("constituency"),
+                "profile_pic": request.form.get("profile_pic"),
+                "no": "21",
+            }
+            mongo.db.cabinet.insert_one(new_minister)
+            flash("Minister Successfully Added")
+        except ConnectionError:
+            raise Exception(
+                "There has been an error adding this minister")
 
     return redirect(url_for("cabinet"))
 
@@ -117,17 +125,21 @@ def add_minister():
 @app.route("/edit_minister/<cab_id>", methods=["GET", "POST"])
 def edit_minister(cab_id):
     if request.method == "POST":
-        updated_details = {
-            "first_name": request.form.get("first_name"),
-            "last_name": request.form.get("last_name"),
-            "role": request.form.get("role"),
-            "constituency": request.form.get("constituency"),
-            "profile_pic": request.form.get("profile_pic"),
-        }
-        mongo.db.cabinet.update_one(
-            {"_id": ObjectId(cab_id)}, {"$set": updated_details})
-        flash("Minister Details Updated")
-        return redirect(url_for("cabinet"))
+        try:
+            updated_details = {
+                "first_name": request.form.get("first_name"),
+                "last_name": request.form.get("last_name"),
+                "role": request.form.get("role"),
+                "constituency": request.form.get("constituency"),
+                "profile_pic": request.form.get("profile_pic"),
+            }
+            mongo.db.cabinet.update_one(
+                {"_id": ObjectId(cab_id)}, {"$set": updated_details})
+            flash("Minister Details Updated")
+            return redirect(url_for("cabinet"))
+        except ConnectionError:
+            raise Exception(
+                "There has been an error editing this minister's details")
 
     cab = mongo.db.cabinet.find_one({"_id": ObjectId(cab_id)})
     return render_template("edit_minister.html", cab=cab)
@@ -137,9 +149,13 @@ def edit_minister(cab_id):
 @app.route("/delete_minister/<cab_id>", methods=["GET", "POST"])
 def delete_minister(cab_id):
     if request.method == "POST":
-        mongo.db.cabinet.delete_one({"_id": ObjectId(cab_id)})
-        flash("Minister Deleted")
-        return redirect(url_for("cabinet"))
+        try:
+            mongo.db.cabinet.delete_one({"_id": ObjectId(cab_id)})
+            flash("Minister Deleted")
+            return redirect(url_for("cabinet"))
+        except ConnectionError:
+            raise Exception(
+                "There has been an error deleting  this minister")
 
     cab = mongo.db.cabinet.find_one({"_id": ObjectId(cab_id)})
     return render_template("delete_minister.html", cab=cab)
@@ -148,12 +164,16 @@ def delete_minister(cab_id):
 # Cabinet Member Profile Page
 @app.route("/cabinet/<cab_name>")
 def cabinet_member(cab_name):
-    minister = mongo.db.cabinet.find()
-    return render_template(
-        "cabinet_member.html", name=cab_name, cabinet=cabinet)
+    try:
+        minister = mongo.db.cabinet.find()
+        return render_template(
+            "cabinet_member.html", name=cab_name, cabinet=cabinet)
+    except ConnectionError:
+        raise Exception(
+            'There has been an error connecting to the Mongo Database')
 
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)
+            debug=False)

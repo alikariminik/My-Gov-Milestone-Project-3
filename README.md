@@ -195,6 +195,28 @@ Further to this, I would have liked to expand the Cabinet_member.html page to ob
 ## Testing 
 During testing of my site, I incorporated a Behaviour Driven Development (BDD). Through my continuous BDD testing, I was able to identify issues with my site such as: problems relating to responsiveness which was fixed through additional media queries which can be found in [style.css](static/css/style.css).
 
+After having added in all of the websites pages, I devised a step-by-step guide which captures what any user to the site may try to achieve when visiting the site. These were as follows:
+1. Open the website - *check to see if all of the contents load successfully - this will be done on every subsequent page opened
+2. Click on the "Sign Up!" button.
+3. Create a new account and attempt to create one which does not meet the password minimum character requirements. Ensure log in directs back to the Home Page.
+4. Check that the "You are already logged in!" message shows where the "Sign Up" and "Log In" buttons originally were. Click "Log Out". Check that Log Out Flash Message shows and is closeable by clicking on the X icon.
+5. Try to Sign up a new account using the same account name as the already created one to ensure that this does not accept a new account creation.
+6. Click on the "Log In" page. Try logging in with incorrect account and password details to ensure this fails. Try again with correct Account Name and incorrect password. Ensure the same flash message appears so that it is not distinguishable whether the password or account name was wrong.
+7. Log In correctly.
+8. Click on "Cabinet". Check to see if the Edit and Delete Icons appear correctly. 
+9. Add in a new Cabinet Member. Enter the form details and ensure that each input field meets their requirements and that no field can be left unpopulated other than Profile Picture (URL). After submitting the form, check that the new cabinet member shows at the bottom of the screen. 
+10. Edit the details of the new Cabinet Member. Ensure that the updated details are reflected in the new Cabinet Members details. 
+11. Delete the newly added in Cabinet Member. 
+12. Click on Rishi Sunak's Portrait to access his Cabinet_Member page. Check that the details from the API load onto the site correctly and that button to navigate back to the cabinet page works.
+13. Click on the other Cabinet Members to check this works too.
+14. Sign out. 
+15. Check the Add Button and Edit & Icons appear and that the text instructing users to log in / sign up are shown at the top of the Cabinet page under the title The Cabinet. 
+16. Repeat using only a Keyboard.
+
+Having stepped through this, I noticed that the API which provides some background information on the Cabinet Member was broken as only /constituency/3698/overview was fetched from the API. This meant that the link would not open as intended this was a broken link. I created the function fixLink() which can be found in line 15 in cabinet_member.js.
+
+I then asked my partner to follow the above steps and let me know what she finds to which she confirmed there were none.
+
 
 ### Validator Testing
 * HTML
